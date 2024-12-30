@@ -1,0 +1,56 @@
+Prepare and assemble two adapters together, the one you received in the package and the standard adapter (xingong tech tsop48 sop44 V3), pay attention to the white arrows on the adapters, these are the keys, they indicate the installation direction
+
+Further, if you want, you can solder four contacts (A18 , RDY , RST , WE) to the ROM adapter, but this is not necessary.
+
+Take your ROM adapter, flip it over and solder a jumper wire or a big blob of solder
+
+
+Insert the ROM adapter into the assembled programmer. Open the Xgopro program, select the chip for programming - MBM29F800BA, as a rule, I use them with my ROM adapters.
+
+
+Download the prepared firmware file, depending on the HI or LO adapter, it should be one megabyte in size, it contains four 256 kb ROM parts
+
+Plug the four wire cable into the adapter on the programmer and then plug it into the ROM adapter
+
+
+If you did not solder the connector, then just gently press it tightly obliquely and press the button in the program - prog.
+
+Wait for the firmware to finish, remove the ROM adapter, remove the solder on the jumper from the bottom
+
+The procedure is the same for all Amiga models, A1200, A3000, A4000.
+The main thing is to ensure that the HI and LO files are flashed correctly into the same HI and LO ROM adapters
+
+
+Small tips on how to prepare the firmware. Standard ROM files are 512 kb in size as a whole, and 256 kb each for HI or LO parts. Now attention! Since ancient times, many HI or LO files have a size of 512 kb, this is inherited due to the fact that the firmware was flashed into 27C400 microcircuits with a size of 512 kb, and in them each firmware file was repeated twice, so the size was 512 kb for each microcircuit, remember this when assembling the firmware for my adapter. If you have two 512 kb standard firmware files, such as those supplied with OS 3.1.4 or OS 3.2, then they just need to be cut in half in a hex editor, because in each file, as I said, there are two identical firmware.
+
+
+Next, to assemble the firmware, you need to prepare 4 parts of 256 kb HI ROM in a hex editor, and assemble them one by one and save this file, it will be one megabyte in size, you also need to do it for LO ROM. As a result, you will have 2 files of one megabyte each. Example -
+
+1.3 3.1 3.1.4 3.2 for HI ROM
+1.3 3.1 3.1.4 3.2 for LO ROM
+
+The adapter supports two extended ROMs of one megabyte each, for this, prepare two extended ROMs, their HI or LO parts are 512kb in size, and flash them into the adapter, now attention that the extended ROM works correctly, you do not need to remove the jumper that you soldered from below! It connects an additional address to the Amiga
+
+When working with ROM adapters, be very careful, do not put them on the edge of the table, the legs of the adapters are very tight and if they bend, they break, be careful and careful. If nevertheless you damaged the leg, then you can carefully change it, slowly cut off the plastic around the damaged leg with a sharp blade, then unsolder the damaged contact and put a new one in its place.
+
+If you need help in assembling the firmware or for any other questions, then write to me at - jamyukraine@gmail.com 
+
+Regards 
+Jamy
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
